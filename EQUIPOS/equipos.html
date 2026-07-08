@@ -91,7 +91,8 @@
       <h2>Lista de problemas</h2>
       <div class="item" onclick="mostrarSolucion('pantalla')">Pantalla no enciende</div>
       <div class="item" onclick="mostrarSolucion('ram')">Error con la RAM</div>
-      <div class="item" onclick="mostrarSolucion('hdd')">Disco duro ruidoso</div>
+      <div class="item" onclick="mostrarSolucion('inyector')">Marcador de Tráfico no funciona</div>
+      <div class="item" onclick="mostrarSolucion('imp')">Impresion con carácteres y simbolos en la Factura</div>
     </div>
 
     <!-- Panel de solución -->
@@ -111,22 +112,28 @@
       if (problema === "pantalla") {
         panel.innerHTML = `
           <h2>Pantalla no enciende</h2>
-          <p><strong>Solución:</strong> Revisar RAM, probar monitor externo, verificar conexión de pantalla.</p>
-          <img src="imagenes/pantalla_error.jpg" alt="Pantalla sin señal">
+          <p><strong>Solución:</strong> Revisar RAM, probar monitor externo, verificar conexión de pantalla, botar la energia residual (Mantener el boton de encendido presionado 30s</p>
+          <img src="" >
         `;
       } else if (problema === "ram") {
         panel.innerHTML = `
           <h2>Error con la RAM</h2>
           <p><strong>Solución:</strong> Limpiar contactos, probar módulo en otro slot, reemplazar si falla.</p>
-          <img src="imagenes/ram_error.jpg" alt="Error RAM">
+          <img src="" >
         `;
-      } else if (problema === "hdd") {
+      } else if (problema === "inyector") {
         panel.innerHTML = `
-          <h2>Disco duro ruidoso</h2>
-          <p><strong>Solución:</strong> Respaldar datos inmediatamente, revisar SMART, considerar reemplazo.</p>
-          <img src="imagenes/hdd_ruidoso.jpg" alt="Disco duro con ruido">
+          <h2>Marcador de Tráfico no funciona</h2>
+          <p><strong>Solución:</strong>Revisar que el Inyector este encendido, si lo esta y no funciona desconectar los 3 cables que tiene conectados alrededor de 5 minutos y volver a conectar, si sigue con fallos se debe revisar cableado </p>
+          <img src="" >
         `;
-      }
+      } else if (problema === "imp") {
+        panel.innerHTML = `
+          <h2>Impresion con carácteres y simbolos en la Factura</h2>
+          <p><strong>Solución:</strong>Revisar el driver que el equipo esta usando, borrar completamente el impresora, reiniciar el servicio de cola de impresion y reinstalar</p>
+          <img src="imagenes/caracteres.jpeg" >
+        `;
+      } 
     }
   </script>
 </body>

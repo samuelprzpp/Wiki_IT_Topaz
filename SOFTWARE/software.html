@@ -85,7 +85,7 @@
     <div class="problemas">
       <h2>Lista de problemas</h2>
       <div class="item" onclick="mostrarSolucion('pantalla')">Version Antigua de SRAP</div>
-      <div class="item" onclick="mostrarSolucion('ram')">Error con la RAM</div>
+      <div class="item" onclick="mostrarSolucion('swre1')">Pantallazo Azul Windows</div>
       <div class="item" onclick="mostrarSolucion('hdd')">Disco duro ruidoso</div>
     </div>
 
@@ -109,11 +109,11 @@
           <p><strong>Solución:</strong> Esto sucede cuando el exe es de fechas anteriores o esta siendo ejecutado en otra ruta, actualizar exe y revisar que sea la ruta correspondiente</p>
           <img src="imagenes/exemalo.png" >
         `;
-      } else if (problema === "ram") {
+      } else if (problema === "swre1") {
         panel.innerHTML = `
-          <h2>Error con la RAM</h2>
-          <p><strong>Solución:</strong> Limpiar contactos, probar módulo en otro slot, reemplazar si falla.</p>
-          <img src="imagenes/ram_error.jpg" alt="Error RAM">
+          <h2>Pantallazo Azul Windows</h2>
+          <p><strong>Solución:</strong></p>
+          <img src="imagenes/bluescreen.png" >
         `;
       } else if (problema === "hdd") {
         panel.innerHTML = `

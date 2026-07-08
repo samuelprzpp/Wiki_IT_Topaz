@@ -83,9 +83,10 @@
     <!-- Lista de problemas -->
     <div class="problemas">
       <h2>Lista de problemas</h2>
-      <div class="item" onclick="mostrarSolucion('pantalla')">No esta creada la cookie</div>
-      <div class="item" onclick="mostrarSolucion('ram')">Ya hay un SRAP ejecutandose</div>
-      <div class="item" onclick="mostrarSolucion('hdd')">Disco duro ruidoso</div>
+      <div class="item" onclick="mostrarSolucion('cookie')">No esta creada la cookie</div>
+      <div class="item" onclick="mostrarSolucion('srap1')">Ya hay un SRAP ejecutandose</div>
+      <div class="item" onclick="mostrarSolucion('att')">Hora de reloj Marcador Atrasada/Adelantada</div>
+      <div class="item" onclick="mostrarSolucion('pro1')">Conexion denegada SOFTLAND-MARCACIONES</div>
     </div>
 
     <!-- Panel de solución -->
@@ -102,23 +103,29 @@
   <script>
     function mostrarSolucion(problema) {
       let panel = document.getElementById("panelSolucion");
-      if (problema === "pantalla") {
+      if (problema === "cookie") {
         panel.innerHTML = `
           <h2>No esta creada la cookie</h2>
           <p><strong>Solución:</strong> Verificar que la tiende este ingresando mediante el siguiente enlace:        https://www.originalpenguin.co.cr/admin/</p>
           <img src="imagenes/cookie.png" >
         `;
-      } else if (problema === "ram") {
+      } else if (problema === "srap1") {
         panel.innerHTML = `
           <h2>Ya hay un SRAP ejecutandose</h2>
-          <p><strong>Solución:</strong> Ir al administrador de tareas>>En la pestaña Detalle, terminar todo proceso del SRAP y volver a abrir si en dado caso continua reiniciar equipo</p>
+          <p><strong>Solución:</strong> Ir al administrador de tareas>>En la pestaña Detalle, terminar todo proceso del SRAP y volver a abrir; si en dado caso continua reiniciar equipo</p>
           <img src="imagenes/SRAP1.png" >
         `;
-      } else if (problema === "hdd") {
+      } else if (problema === "att") {
         panel.innerHTML = `
-          <h2>Disco duro ruidoso</h2>
-          <p><strong>Solución:</strong> Respaldar datos inmediatamente, revisar SMART, considerar reemplazo.</p>
-          <img src="imagenes/hdd_ruidoso.jpg" alt="Disco duro con ruido">
+          <h2>Hora de reloj Marcador Atrasada/Adelantada</h2>
+          <p><strong>Solución:</strong> Ingresar al Attendance Management en el equipo, buscamos la ip 192.168.1.240, *click derecho conectamos *click derecho sincronizamos hora y esto deberia solucionarlo</p>
+          <img src="imagenes/horamala.png" >
+        `;
+      } else if (problema === "pro1") {
+        panel.innerHTML = `
+          <h2>Fallo al ingresar al POS de Facturación</h2>
+          <p><strong>Solución:</strong>Los puntos a revisar: 1-Mirar si la maquian principal esta encendida 2-Revisar conexion a internet en ambas maquinas 3- Revisar que ambos firewall esten abajo 4- Revisar el cableado ethernet y el switch esten correctamente funcionando</p>
+          <img src="imagenes/pos.png" >
         `;
       }
     }

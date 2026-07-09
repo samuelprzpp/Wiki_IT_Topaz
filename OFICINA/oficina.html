@@ -84,8 +84,8 @@
     <div class="problemas">
       <h2>Lista de problemas</h2>
       <div class="item" onclick="mostrarSolucion('pantalla')">Conflicto en Dominio Topaz</div>
-      <div class="item" onclick="mostrarSolucion('ram')">Error con la RAM</div>
-      <div class="item" onclick="mostrarSolucion('hdd')">Disco duro ruidoso</div>
+      <div class="item" onclick="mostrarSolucion('ram')">Error de controladores ODBC</div>
+      <div class="item" onclick="mostrarSolucion('of1')">Agregar Codigo de Barra a reporte de PEDIDO en SRAP</div>
     </div>
 
     <!-- Panel de solución -->
@@ -110,15 +110,15 @@
         `;
       } else if (problema === "ram") {
         panel.innerHTML = `
-          <h2>Error con la RAM</h2>
-          <p><strong>Solución:</strong> Limpiar contactos, probar módulo en otro slot, reemplazar si falla.</p>
-          <img src="imagenes/ram_error.jpg" alt="Error RAM">
+          <h2>Problemas ODBC para correr aplicaciones de red</h2>
+          <p><strong>Solución:</strong> ODBC necesarios para correr programas relacionados con LIRIOS Y TOPAZ </p>
+          <img src="imagenes/odbc.png" >
         `;
-      } else if (problema === "hdd") {
+      } else if (problema === "of1") {
         panel.innerHTML = `
-          <h2>Disco duro ruidoso</h2>
-          <p><strong>Solución:</strong> Respaldar datos inmediatamente, revisar SMART, considerar reemplazo.</p>
-          <img src="imagenes/hdd_ruidoso.jpg" alt="Disco duro con ruido">
+          <h2>Agregar Codigo de Barra a reporte de PEDIDO en SRAP</h2>
+          <p><strong>Solución:</strong></p>
+          <img src="imagenes/reportepedido.png" >
         `;
       }
     }

@@ -84,6 +84,7 @@
     <div class="problemas">
       <h2>Lista de problemas</h2>
       <div class="item" onclick="mostrarSolucion('cookie')">No esta creada la cookie</div>
+      <div class="item" onclick="mostrarSolucion('pro2')">Tratando de realizar mas de una conexion SOFTLAND</div>
       <div class="item" onclick="mostrarSolucion('srap1')">Ya hay un SRAP ejecutandose</div>
       <div class="item" onclick="mostrarSolucion('att')">Hora de reloj Marcador Atrasada/Adelantada</div>
       <div class="item" onclick="mostrarSolucion('pro1')">Conexion denegada SOFTLAND-MARCACIONES</div>
@@ -127,8 +128,14 @@
           <p><strong>Solución:</strong>Los puntos a revisar: 1-Mirar si la maquian principal esta encendida 2-Revisar conexion a internet en ambas maquinas 3- Revisar que ambos firewall esten abajo 4- Revisar el cableado ethernet y el switch esten correctamente funcionando</p>
           <img src="imagenes/pos.png" >
         `;
-      }
+      } else if (problema === "pro2") {
+        panel.innerHTML = `
+          <h2>Tratando de realizar mas de una conexion SOFTLAND</h2>
+          <p><strong>Solución:</strong>Se debe aperturar Usuario en la caja donde se abrio por ultima vez el usuario, realizar el cierre de sesión de este y de esta forma en la máquina donde nos dio el error deberia permitirnos aperturar.</p>
+          <img src="imagenes/pos2.png" >
+        `; 
     }
+  }
   </script>
 </body>
 </html>

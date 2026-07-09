@@ -86,7 +86,8 @@
       <h2>Lista de problemas</h2>
       <div class="item" onclick="mostrarSolucion('pantalla')">Version Antigua de SRAP</div>
       <div class="item" onclick="mostrarSolucion('swre1')">Pantallazo Azul Windows</div>
-      <div class="item" onclick="mostrarSolucion('hdd')">Disco duro ruidoso</div>
+      <div class="item" onclick="mostrarSolucion('swre2')">Fallo al cargar AUDACES</div>
+      <div class="item" onclick="mostrarSolucion('swre3')">Windows no puede acceder a la red</div>
     </div>
 
     <!-- Panel de solución -->
@@ -115,11 +116,17 @@
           <p><strong>Solución:</strong></p>
           <img src="imagenes/bluescreen.png" >
         `;
-      } else if (problema === "hdd") {
+      } else if (problema === "swre2") {
         panel.innerHTML = `
-          <h2>Disco duro ruidoso</h2>
-          <p><strong>Solución:</strong> Respaldar datos inmediatamente, revisar SMART, considerar reemplazo.</p>
-          <img src="imagenes/hdd_ruidoso.jpg" alt="Disco duro con ruido">
+          <h2>Fallo al cargar AUDACES</h2>
+          <p><strong>Solución:En Conexion a escritorio remoto es la 192.168.1.42, ingresar con las credenciales de administrador, y ver si esta activo el administrador de licencias de audaces como se observa en la imagen</strong></p>
+          <img src="imagenes/audaces.png" >
+        `;
+      } else if (problema === "swre3") {
+        panel.innerHTML = `
+          <h2>Windows no puede acceder a la red</h2>
+          <p><strong>Puntos a revisar:</strong></p>
+          <img src="imagenes/errored.png" >
         `;
       }
     }

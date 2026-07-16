@@ -88,6 +88,7 @@
       <div class="item" onclick="mostrarSolucion('swre1')">Pantallazo Azul Windows</div>
       <div class="item" onclick="mostrarSolucion('swre2')">Fallo al cargar AUDACES</div>
       <div class="item" onclick="mostrarSolucion('swre3')">Windows no puede acceder a la red</div>
+      <div class="item" onclick="mostrarSolucion('swre4')">Bloquear/Desbloquear Bodegas-SOFTLAND</div>
     </div>
 
     <!-- Panel de solución -->
@@ -127,6 +128,12 @@
           <h2>Windows no puede acceder a la red</h2>
           <p><strong>Puntos a revisar:</strong></p>
           <img src="imagenes/errored.png" >
+        `;
+      } else if (problema === "swre4") {
+        panel.innerHTML = `
+          <h2>Bloquear/Desbloquear Bodegas-SOFTLAND</h2>
+          <p><strong>Puntos a revisar:</strong></p>
+          <img src="imagenes/bdblocked.png" >
         `;
       }
     }

@@ -88,6 +88,7 @@
       <div class="item" onclick="mostrarSolucion('srap1')">Ya hay un SRAP ejecutandose</div>
       <div class="item" onclick="mostrarSolucion('att')">Hora de reloj Marcador Atrasada/Adelantada</div>
       <div class="item" onclick="mostrarSolucion('pro1')">Conexion denegada SOFTLAND-MARCACIONES</div>
+      <div class="item" onclick="mostrarSolucion('pro3')">Problema con Visor de Informes Crystal Reports</div>
     </div>
 
     <!-- Panel de solución -->
@@ -133,6 +134,12 @@
           <h2>Tratando de realizar mas de una conexion SOFTLAND</h2>
           <p><strong>Solución:</strong>Se debe aperturar Usuario en la caja donde se abrio por ultima vez el usuario, realizar el cierre de sesión de este y de esta forma en la máquina donde nos dio el error deberia permitirnos aperturar.</p>
           <img src="imagenes/pos2.png" >
+        `; 
+    }    else if (problema === "pro3") {
+        panel.innerHTML = `
+          <h2>Page Footer is too large for the page</h2>
+          <p><strong>Solución:</strong></p>
+          <img src="imagenes/footer.png" >
         `; 
     }
   }

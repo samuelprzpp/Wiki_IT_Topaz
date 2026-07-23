@@ -81,7 +81,7 @@
 </head>
 <body>
   <header>
-    <h1>Problemas de Hardware</h1>
+    <h1>Problemas de Equipo Fisico</h1>
     <p>Selecciona un problema para ver la solución</p>
   </header>
 
@@ -93,6 +93,7 @@
       <div class="item" onclick="mostrarSolucion('ram')">Error con la RAM</div>
       <div class="item" onclick="mostrarSolucion('inyector')">Marcador de Tráfico no funciona</div>
       <div class="item" onclick="mostrarSolucion('imp')">Impresion con carácteres y simbolos en la Factura</div>
+      <div class="item" onclick="mostrarSolucion('imp2')">Impresora en estado de ERROR</div>
     </div>
 
     <!-- Panel de solución -->
@@ -133,7 +134,13 @@
           <p><strong>Solución:</strong>Revisar el driver que el equipo esta usando, borrar completamente el impresora, reiniciar el servicio de cola de impresion y reinstalar</p>
           <img src="imagenes/caracteres.jpeg" >
         `;
-      } 
+      } else if (problema === "imp2") {
+        panel.innerHTML = `
+          <h2>Impresora en estado de Error</h2>
+          <p><strong>Solución:</strong></p>
+          <img src="imagenes/printers.png" >
+        `;
+      }
     }
   </script>
 </body>
